@@ -16,9 +16,9 @@ io.on('connection', socket => {
   connectedUsers[user] = socket.id;
 });
 
-mongoose.connect('mongodb+srv://teste:teste@cluster0-evngm.mongodb.net/timdev?retryWrites=true&w=majority',{
-  useNewUrlParser: true
-});
+// mongoose.connect('mongodb+srv://',{ //removendo informacoes sensiveis
+//   useNewUrlParser: true
+// });
 
 app.use((req, res, next) => {
   req.io = io;
